@@ -1,0 +1,59 @@
+Hallo and welcome to my assignment for practice/work.
+Since this App has been made through the Laravel framework some steps need to be prepared befor the app can start.
+
+1.) A PHP server and a Sql server need to be running on the system.
+	Here for those who want a quick solutions download and install WAMPSERVER from:
+	http://www.wampserver.com/en/#download-wrapper
+	Quick and easy no modifications are needed.
+
+2.) Composer needs to be installed on the system for Laravel to function.
+	https://getcomposer.org/
+	Same as above just download and install.
+
+3.) Node.js is one of the needed requirements to run some commands from the setup of Laravel.
+	https://nodejs.org/en/
+	Same as above just download and install.
+
+4.) Laravel installation on the system. With the points done above we can install Laravel on our system now.
+	To be sure we can check if all need is present on:
+	https://laravel.com/docs/5.8 , but the points above should cover it.
+	Now run from the console app like CMD on Windows:
+	
+	composer global require laravel/installer
+	
+	After this all the necessary files are loaded for creating or working with laravel apps.
+
+5.) Setup of app
+	Copy the content from the app to any location you need. People tend to place it directly on the PHP server, 
+	but that is not necessary here since we can start it with the composer from anywhere. Still feel free to place it 
+	in the PHP servers HTTP folder.
+	I have included an SQL backup file with the project to create a Database with the data needed named movie.sql.
+	
+	Navigate to the main folder of the project and input the following in the console: 
+	
+	- `composer install`
+	- `cp .env.example .env` //main settings file for connection to DB and other servers. Change the part:
+	
+		DB_CONNECTION=mysql
+		DB_HOST=127.0.0.1
+		DB_PORT=3306
+		DB_DATABASE=movie
+		DB_USERNAME=root
+		DB_PASSWORD=
+	to the data of your local SQL settings.
+	
+	- `php artisan key:generate`
+	
+	The next 2 are not needed if you imported the movie.sql file and created a DB with the tables.
+	- `php artisan migrate`
+	- `php artisan db:seed`
+	
+	- `npm install`
+	- `npm run dev`
+	
+	- `php artisan serve` // this will run the app through the PHP server and the results can be viewed on:
+	<http://127.0.0.1:8000>
+
+## License
+
+None by Durakovic
