@@ -53,6 +53,10 @@ Since this App has been made through the Laravel framework some steps need to be
 	
 	- `php artisan serve` // this will run the app through the PHP server and the results can be viewed on:
 	<http://127.0.0.1:8000>
+	
+	You can create new users as you wish. The admin credentials are:
+	email:admin@admin.com
+	pass:password
 
 ## License
 
